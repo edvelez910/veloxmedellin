@@ -1901,6 +1901,9 @@ function NavBar({
 Object.assign(__ds_scope, { NavBar });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/navigation/NavBar.jsx", error: String((e && e.message) || e) }); }
 
+// Expose components before the compiled screens capture their references.
+Object.assign(__ds_ns, __ds_scope);
+
 // ui_kits/website/BookingScreen.jsx
 try { (() => {
 const {
@@ -1914,7 +1917,9 @@ const {
   StarRating,
   QuoteCard
 } = window.VelozVIPDesignSystem_b0ea98;
-const D = window.VELOX_DATA;
+const D = new Proxy({}, {
+  get: (_, key) => window.VELOX_DATA?.[key]
+});
 const bkWrap = {
   maxWidth: 'var(--maxw)',
   margin: '0 auto',
@@ -2304,7 +2309,9 @@ const {
   Eyebrow,
   Icon
 } = window.VelozVIPDesignSystem_b0ea98;
-const D = window.VELOX_DATA;
+const D = new Proxy({}, {
+  get: (_, key) => window.VELOX_DATA?.[key]
+});
 const fleetWrap = {
   maxWidth: 'var(--maxw)',
   margin: '0 auto',
@@ -2469,7 +2476,9 @@ const {
   ArrowButton,
   Icon
 } = window.VelozVIPDesignSystem_b0ea98;
-const D = window.VELOX_DATA;
+const D = new Proxy({}, {
+  get: (_, key) => window.VELOX_DATA?.[key]
+});
 const veloxSec = {
   padding: '110px 0',
   position: 'relative'
@@ -3214,7 +3223,9 @@ const {
   LocationPill,
   StepCard
 } = window.VelozVIPDesignSystem_b0ea98;
-const D = window.VELOX_DATA;
+const D = new Proxy({}, {
+  get: (_, key) => window.VELOX_DATA?.[key]
+});
 const svcWrap = {
   maxWidth: 'var(--maxw)',
   margin: '0 auto',
