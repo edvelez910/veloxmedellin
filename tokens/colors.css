@@ -1,0 +1,72 @@
+:root{
+  /* ---- Brand gold (champagne). Sampled from the logo: #c9a96b ---- */
+  --gold-100:#f6efe0;
+  --gold-200:#ecdfc4;
+  --gold-300:#dcc59a;
+  --gold-400:#d4b784;
+  --gold-500:#c9a96b; /* brand primary — logo star + wordmark accent */
+  --gold-600:#b5945a;
+  --gold-700:#98794a;
+  --gold-800:#6f5734;
+
+  /* ---- Ink / matte black ---- */
+  --ink-950:#0a0a0b;
+  --ink-900:#0c0d0f;
+  --ink-850:#151517;
+  --ink-800:#1e1e21;
+  --ink-750:#202023;
+  --ink-700:#242424; /* logo plate black */
+  --ink-600:#39393a;
+
+  /* ---- Neutrals ---- */
+  --grey-050:#ffffff;
+  --grey-100:#f4f4f5; /* page bg (template) — logo plate is #f4f4f4 */
+  --grey-200:#f0f0f1;
+  --grey-300:#e6e6e8;
+  --grey-400:#d3d3d6;
+  --grey-500:#9a9a9e;
+  --grey-600:#6c6c70;
+
+  /* ---- Semantic status ---- */
+  --status-live:#4ade80;      /* "en ruta" dot, from template */
+  --status-star:#c9a96b;      /* rating stars use brand gold, not yellow */
+  --status-warn:#d99a3f;
+  --status-danger:#c8553d;
+
+  /* ================= Semantic aliases ================= */
+  --surface-page:var(--grey-100);
+  --surface-card:var(--grey-050);
+  --surface-sunken:var(--grey-200);
+  --surface-inverse:var(--ink-900);
+  --surface-inverse-2:var(--ink-850);
+  --surface-inverse-card:var(--ink-750);
+  --surface-gold:var(--gold-500);
+  --surface-gold-soft:var(--gold-100);
+
+  --text-body:var(--ink-700);
+  --text-strong:var(--ink-900);
+  --text-muted:var(--grey-600);
+  --text-faint:var(--grey-500);
+  --text-on-dark:#ffffff;
+  --text-on-dark-muted:rgba(255,255,255,.62);
+  --text-on-dark-faint:rgba(255,255,255,.40);
+  --text-on-gold:var(--ink-900);
+  --text-accent:var(--gold-600);
+  --text-accent-on-dark:var(--gold-400);
+
+  --border-hairline:var(--grey-300);
+  --border-hairline-dark:rgba(255,255,255,.08);
+  --border-gold:rgba(201,169,107,.42);
+  --border-glass:rgba(255,255,255,.16);
+
+  --accent:var(--gold-500);
+  --accent-hover:var(--gold-400);
+  --accent-press:var(--gold-600);
+
+  --overlay-hero:linear-gradient(180deg,rgba(10,10,11,.62) 0%,rgba(10,10,11,.30) 32%,rgba(10,10,11,.50) 58%,rgba(10,10,11,.94) 100%); /* @kind color */
+  --overlay-card:linear-gradient(180deg,rgba(10,10,11,.08),rgba(10,10,11,.84)); /* @kind color */
+  --overlay-scrim:linear-gradient(180deg,rgba(12,13,15,.70),rgba(12,13,15,.96)); /* @kind color */
+  --glass-dark:rgba(18,18,20,.55);
+  --glass-light:rgba(255,255,255,.12);
+  --gold-rule:linear-gradient(90deg,transparent,var(--gold-500),transparent);
+}

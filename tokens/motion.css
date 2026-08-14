@@ -1,0 +1,15 @@
+:root{
+  --ease:cubic-bezier(.22,1,.36,1); /* @kind other */      /* the house curve — everything uses it */
+  --dur-fast:.3s; /* @kind other */
+  --dur-base:.4s; /* @kind other */
+  --dur-slow:.5s; /* @kind other */
+  --dur-image:.7s; /* @kind other */
+  --dur-reveal:.9s; /* @kind other */
+  --lift-sm:-3px; /* @kind other */   /* button hover */
+  --lift-md:-6px; /* @kind other */   /* card hover */
+  --lift-lg:-8px; /* @kind other */   /* dark step card hover */
+  --press-scale:.94; /* @kind other */
+  --marquee-slow:40s; /* @kind other */
+  --marquee-base:32s; /* @kind other */
+  --marquee-fast:18s; /* @kind other */
+}

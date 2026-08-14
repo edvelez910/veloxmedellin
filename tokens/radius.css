@@ -1,0 +1,11 @@
+:root{
+  --r-xs:9px;
+  --r-sm:12px;
+  --r-md:16px;
+  --r-lg:18px;
+  --r-xl:22px;   /* --radius in template */
+  --r-2xl:26px;
+  --r-3xl:30px;  /* --radius-lg in template */
+  --r-pill:999px;
+  --r-circle:50%;
+}

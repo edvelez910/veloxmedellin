@@ -1,0 +1,14 @@
+:root{
+  --sh-hairline:0 4px 14px rgba(0,0,0,.04);
+  --sh-sm:0 10px 30px rgba(0,0,0,.10);
+  --sh-md:0 16px 40px rgba(0,0,0,.16);
+  --sh-card:0 30px 60px rgba(0,0,0,.06);
+  --sh-card-hover:0 30px 60px rgba(0,0,0,.09);
+  --sh-image:0 20px 45px rgba(0,0,0,.14);
+  --sh-nav:0 8px 30px rgba(0,0,0,.25);
+  --sh-gold:0 12px 34px rgba(201,169,107,.30);
+  --sh-gold-ring:0 0 0 4px rgba(201,169,107,.22);
+  --sh-live-ring:0 0 0 4px rgba(74,222,128,.20);
+  --blur-glass:blur(12px); /* @kind other */
+  --blur-nav:blur(16px); /* @kind other */
+}

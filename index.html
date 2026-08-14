@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0d0f">
+  <meta name="description" content="Movilidad privada y concierge de experiencias en Medellín, aeropuertos JMC y EOH, Oriente antioqueño y destinos cercanos.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Velox VIP Services | Movilidad privada en Medellín">
+  <meta property="og:description" content="Tu tranquilidad, nuestra ruta. Transfers, movilidad por horas, eventos y experiencias en Medellín.">
+  <title>Velox VIP Services | Movilidad privada en Medellín</title>
+  <link rel="icon" type="image/png" href="assets/mark-velox-star.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html,body{margin:0;background:var(--surface-page);font-family:var(--font-sans);color:var(--text-body);-webkit-font-smoothing:antialiased}
+    *{box-sizing:border-box}img{display:block;max-width:100%}a{color:var(--text-accent);text-decoration:none}a:hover{color:var(--gold-700)}button{font-family:var(--font-sans)}
+    .noscript{max-width:720px;margin:120px auto;padding:32px;background:#fff;border-radius:24px;text-align:center}
+    @media(max-width:980px){[data-grid2]{grid-template-columns:1fr!important}}
+  </style>
+  <script defer src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script defer src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script defer src="_ds_bundle.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <noscript><div class="noscript"><h1>Velox VIP Services</h1><p>Activa JavaScript para consultar nuestros servicios y solicitar una reserva.</p></div></noscript>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      const DS = window.VelozVIPDesignSystem_b0ea98;
+      const D = window.VELOX_DATA;
+
+      function Site() {
+        const [view, setView] = React.useState('home');
+        const [scrolled, setScrolled] = React.useState(false);
+
+        React.useEffect(function () {
+          const handleScroll = function () { setScrolled(window.scrollY > 60); };
+          window.addEventListener('scroll', handleScroll, { passive: true });
+          return function () { window.removeEventListener('scroll', handleScroll); };
+        }, []);
+
+        const navigate = function (id) {
+          setView(id);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        const Screen = { home: window.HomeScreen, servicios: window.ServicesScreen, flota: window.FleetScreen, reserva: window.BookingScreen }[view];
+
+        return React.createElement('div', null,
+          React.createElement('div', { style: { position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100 } },
+            React.createElement(DS.NavBar, {
+              links: D.nav,
+              active: view,
+              onNavigate: navigate,
+              scrolled: scrolled || view === 'reserva',
+              assetBase: 'assets',
+              cta: React.createElement(DS.Button, { variant: 'gold', size: 'sm', arrow: true, onClick: function () { navigate('reserva'); } }, 'Reservar')
+            })
+          ),
+          React.createElement(Screen, { onNavigate: navigate }),
+          React.createElement(DS.Footer, {
+            assetBase: 'assets',
+            megaWord: 'VELOX',
+            columns: [
+              { title: 'Servicios', links: [
+                { label: 'Transfers aeropuerto', onClick: function () { navigate('servicios'); } },
+                { label: 'Movilidad por horas', onClick: function () { navigate('servicios'); } },
+                { label: 'Eventos y ocasiones', onClick: function () { navigate('servicios'); } },
+                { label: 'Experiencias y tours', onClick: function () { navigate('servicios'); } }
+              ] },
+              { title: 'Velox', links: [
+                { label: 'Inicio', onClick: function () { navigate('home'); } },
+                { label: 'Flota', onClick: function () { navigate('flota'); } },
+                { label: 'Reservar', onClick: function () { navigate('reserva'); } }
+              ] }
+            ],
+            contact: { lines: ['Medellín, Colombia', 'Aeropuertos JMC y EOH', 'Atención con reserva previa'] },
+            legal: '© 2026 Velox VIP Services · Movilidad privada y concierge de experiencias'
+          })
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(Site));
+    });
+  </script>
+</body>
+</html>

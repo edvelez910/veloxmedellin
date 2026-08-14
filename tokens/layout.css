@@ -1,0 +1,9 @@
+:root{
+  --maxw:1240px; /* @kind spacing */
+  --gutter:28px;
+  --gutter-sm:20px;
+  --nav-h:74px; /* @kind spacing */
+  --nav-h-scrolled:58px; /* @kind spacing */
+  --bp-md:980px; /* @kind spacing */
+  --bp-sm:600px; /* @kind spacing */
+}
